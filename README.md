@@ -16,5 +16,12 @@ App para aluguel de carros, feito em
 <img src="https://user-images.githubusercontent.com/53832972/159979991-a0b3b3f5-8520-46e4-a8e3-fc76102e3e09.png" style="width: 200px;"/>
 </div>
 
+## Para rodar
+  Importante que você tenha o app Expo instalado ou o Android Studio (no PC), da um clone no projeto e roda o comando yarn pra baixar as dependencias. Depois é so rodar expo start.
+
 
 -- App feito no curso da trilha React Native da Rockeseat :)
+
+
+-- nao finalizado --
+
