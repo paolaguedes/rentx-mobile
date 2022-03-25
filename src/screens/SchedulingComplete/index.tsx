@@ -1,47 +1,41 @@
-import React from 'react'
+import React from "react";
 // hooks apenas dentro component react
-import { StatusBar, useWindowDimensions } from 'react-native'
+import { StatusBar, useWindowDimensions } from "react-native";
 
-import LogoSvg from '../../assets/logo_background_gray.svg'
-import DoneSvg from '../../assets/done.svg'
+import LogoSvg from "../../assets/logo_background_gray.svg";
+import DoneSvg from "../../assets/done.svg";
 
-import { ConfirmButton } from '../../components/ConfirmButton'
+import { ConfirmButton } from "../../components/ConfirmButton";
 
-import {
-  Container,
-  Content,
-  Title,
-  Message,
-  Footer
-} from './styles'
+import { Container, Content, Title, Message, Footer } from "./styles";
 
-export function SchedulingComplete(){
-  const { width } = useWindowDimensions()
+export function SchedulingCompleteScreen() {
+  const { width } = useWindowDimensions();
 
-  return(
+  return (
     <Container>
       <StatusBar
         barStyle="light-content"
         translucent
         backgroundColor="transparent"
       />
-      
-     <LogoSvg width={width}/>
+
+      <LogoSvg width={width} />
 
       <Content>
-        <DoneSvg width={80} height={80}/>
+        <DoneSvg width={80} height={80} />
         <Title>Carro alugado!</Title>
 
         <Message>
-          Agora você só precisa ir {'\n'}
-          até a concessionária da RENTX {'\n'}
+          Agora você só precisa ir {"\n"}
+          até a concessionária da RENTX {"\n"}
           pegar o seu automóvel.
         </Message>
       </Content>
 
       <Footer>
-        <ConfirmButton title="OK"/>
+        <ConfirmButton title="OK" />
       </Footer>
     </Container>
-  )
+  );
 }
