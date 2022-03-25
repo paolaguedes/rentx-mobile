@@ -1,4 +1,5 @@
 import React from "react";
+import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 import { BackButton } from "../../components/BackButton";
 import { ImageSlider } from "../../components/ImageSlider";
@@ -11,6 +12,7 @@ import ForceSvg from "../../assets/force.svg";
 import GasolineSvg from "../../assets/gasoline.svg";
 import ExchangeSvg from "../../assets/exchange.svg";
 import PeopleSvg from "../../assets/people.svg";
+import { RootStackParamList } from "../../routes/@types/navigation";
 
 import {
   Container,
@@ -29,16 +31,21 @@ import {
   Footer,
 } from "./styles";
 
-export function CarDetailsScreen() {
+type CarDetailsProps = NativeStackScreenProps<RootStackParamList, "CarDetails">;
+
+export function CarDetailsScreen(props: CarDetailsProps) {
   return (
     <Container>
       <Header>
-        <BackButton />
+        <BackButton onPress={() => props.navigation.navigate("Home")} />
       </Header>
 
       <CarImages>
         <ImageSlider
           imageUrl={[
+            "https://freepngimg.com/thumb/audi/35227-5-audi-rs5-red.png",
+            "https://freepngimg.com/thumb/audi/35227-5-audi-rs5-red.png",
+            "https://freepngimg.com/thumb/audi/35227-5-audi-rs5-red.png",
             "https://freepngimg.com/thumb/audi/35227-5-audi-rs5-red.png",
           ]}
         />
@@ -74,7 +81,10 @@ export function CarDetailsScreen() {
       </Content>
 
       <Footer>
-        <Button title="Confirmar" />
+        <Button
+          title="Confirmar"
+          onPress={() => props.navigation.navigate("Scheduling")}
+        />
       </Footer>
     </Container>
   );

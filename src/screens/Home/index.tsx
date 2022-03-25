@@ -1,5 +1,5 @@
 import React from "react";
-import { StatusBar, Button } from "react-native";
+import { StatusBar } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 
@@ -21,8 +21,6 @@ export function HomeScreen(props: HomeScreenProps) {
     thumbnail: "https://freepngimg.com/thumb/audi/35227-5-audi-rs5-red.png",
   };
 
-  function handleNavigate(where: string) {}
-
   return (
     <Container>
       <StatusBar
@@ -37,10 +35,6 @@ export function HomeScreen(props: HomeScreenProps) {
         </HeaderContent>
       </Header>
 
-      <Button
-        title="Do Something"
-        onPress={() => props.navigation.navigate("CarDetails")}
-      />
       <CarList
         data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}
         keyExtractor={(item) => String(item)}

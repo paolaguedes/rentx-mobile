@@ -1,5 +1,5 @@
 import React from "react";
-import { RectButtonProps } from "react-native-gesture-handler";
+import { TouchableOpacityProps } from "react-native";
 
 import GasolineSvg from "../../assets/gasoline.svg";
 import {
@@ -25,7 +25,7 @@ interface CarData {
   thumbnail: string;
 }
 
-interface Props extends RectButtonProps {
+interface Props extends TouchableOpacityProps {
   data: CarData;
 }
 
